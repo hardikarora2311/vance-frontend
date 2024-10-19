@@ -3,15 +3,13 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://web-api.vance.club/public',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
-  }
+  // server: {
+  //   proxy: {
+  //     '/api': {
+  //       target: 'https://web-api.vance.club/public',
+  //       changeOrigin: true,
+  //       rewrite: (path) => path.replace(/^\/api/, '')
+  //     }
+  //   }
+  // }
 });
-
-

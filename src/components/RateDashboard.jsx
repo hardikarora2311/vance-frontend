@@ -63,7 +63,7 @@ const RateDashboard = ({ user }) => {
       setError(null);
       try {
         const response = await fetch(
-          `/api/api/currency-converter/forex?code=${selectedCountry.apiCode}&timeline=1M`
+          `https://web-api.vance.club/public/api/currency-converter/forex?code=${selectedCountry.apiCode}&timeline=1M`
         );
 
         if (!response.ok) {
