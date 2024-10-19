@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,6 +9,10 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   const containerRef = useRef(null);
   const contentRef = useRef(null);
+
+  useEffect(() => {
+    window.dispatchEvent(new Event("resize"));
+  }, []);
 
   useGSAP(() => {
     const tl = gsap.timeline({
