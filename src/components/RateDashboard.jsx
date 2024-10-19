@@ -112,11 +112,21 @@ const RateDashboard = ({ user }) => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-[#222222] text-white p-8 max-w-4xl mx-auto rounded-3xl">
-        <div className="bg-red-500/10 border border-red-500 rounded-lg p-4 text-red-500">
-          {error}
+      <>
+        <div className="min-h-screen bg-[#222222] text-white p-8 max-w-4xl mx-auto rounded-3xl">
+          <div className="bg-red-500/10 border border-red-500 rounded-lg p-4 text-red-500">
+            {error}
+          </div>
         </div>
-      </div>
+        <RateAlertModal
+          isOpen={isAlertModalOpen}
+          onClose={() => setIsAlertModalOpen(false)}
+          selectedCountry={selectedCountry}
+          onAlertCreated={handleAlertCreated}
+          userId={user.uid}
+        />
+        <AlertHistory refreshTrigger={refreshTrigger} userId={user.uid} />
+      </>
     );
   }
 
