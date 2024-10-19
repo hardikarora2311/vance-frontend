@@ -118,13 +118,7 @@ const RateDashboard = ({ user }) => {
             {error}
           </div>
         </div>
-        <RateAlertModal
-          isOpen={isAlertModalOpen}
-          onClose={() => setIsAlertModalOpen(false)}
-          selectedCountry={selectedCountry}
-          onAlertCreated={handleAlertCreated}
-          userId={user.uid}
-        />
+
         <AlertHistory refreshTrigger={refreshTrigger} userId={user.uid} />
       </>
     );
