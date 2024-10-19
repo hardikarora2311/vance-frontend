@@ -9,7 +9,7 @@ export default defineConfig({
         target: 'https://web-api.vance.club/public',
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/api/, '')
+        // rewrite: (path) => path.replace(/^\/api/, '')
       }
     }
   }
