@@ -65,7 +65,7 @@ const RateDashboard = ({ user }) => {
         const baseUrl = import.meta.env.VITE_API_BASE_URL;
         
         const response = await fetch(
-          `${baseUrl}/api/currency-converter/forex?code=${selectedCountry.apiCode}&timeline=1M`,
+          `/api/proxy?code=${selectedCountry.apiCode}&timeline=1M`,
           {
             method: "GET",
             headers: {
