@@ -63,7 +63,7 @@ const RateDashboard = ({ user }) => {
       setError(null);
       try {
         const response = await fetch(
-          `/api/data/currency-converter/forex?code=${selectedCountry.apiCode}&timeline=1M`,
+          `/api/api/currency-converter/forex?code=${selectedCountry.apiCode}&timeline=1M`,
           {
             method: "GET",
             headers: {
