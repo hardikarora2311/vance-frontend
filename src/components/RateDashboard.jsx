@@ -71,7 +71,7 @@ const RateDashboard = ({ user }) => {
             headers: {
               "Content-Type": "application/json",
             },
-            mode: "no-cors",
+            // mode: "no-cors",
             // credentials: "include",
           }
         );
